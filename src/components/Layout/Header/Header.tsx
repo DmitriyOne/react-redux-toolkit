@@ -10,7 +10,6 @@ export const Header: FunctionComponent = () => (
       py-3 
       mb-5 
       bg-primary 
-      bg-opacity-10
     '>
     <div className='
         container 

@@ -18,7 +18,7 @@ export const Menu: FunctionComponent = () => (
       >
         <NavLink
           to={item.href}
-          className="nav-link"
+          className="nav-link text-white"
         >
           {item.text}
         </NavLink>

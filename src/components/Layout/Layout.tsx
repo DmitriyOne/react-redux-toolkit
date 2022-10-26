@@ -10,12 +10,16 @@ export const Layout: FunctionComponent = () => (
       flex-column
       fullscreen 
       container-fluid 
-      bg-primary 
-      bg-gradient
       p-0
     ">
     <Header />
-    <main className="container d-flex justify-content-center">
+    <main className="
+      container
+      d-flex 
+      flex-column
+      justify-content-center  
+      align-items-center
+    ">
       <Outlet />
     </main>
     <Footer />
