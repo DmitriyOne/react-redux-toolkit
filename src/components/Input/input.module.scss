@@ -1,0 +1,32 @@
+@use '../../styles/colors.scss';
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid colors.$black;
+  border-radius: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  &:focus {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid colors.$black;
+    box-shadow: none;
+  }
+
+  &:focus~label {
+    transform: scale(.85) translateY(-50%) translateX(0rem) !important;
+  }
+
+  &:not(:placeholder-shown)~label {
+    transform: scale(.85) translateY(-50%) translateX(0rem) !important;
+  }
+}
+
+.label {
+  height: auto !important;
+  top: auto !important;
+  bottom: 0;
+  padding: 0.5rem 0 !important;
+}

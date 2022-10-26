@@ -7,6 +7,7 @@ export const Footer: FunctionComponent = () => (
       mt-auto 
       container-fluid 
       py-3
+      border-top
     ">
     <div className="
         container 
