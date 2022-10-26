@@ -1,7 +1,13 @@
 import { FunctionComponent } from 'react'
+import { Heading, StateChange } from '../components'
 
 export const StatePage: FunctionComponent = () => {
   return (
-    <div>State Page</div>
+    <>
+      <Heading align='center'>
+        State Page
+      </Heading>
+      <StateChange />
+    </>
   )
 }

@@ -1,9 +1,10 @@
-import classNames from 'classnames'
 import { ChangeEvent, FunctionComponent, InputHTMLAttributes } from 'react'
+import classNames from 'classnames'
 
 import styles from './input.module.scss'
 
 interface IProps {
+  componentClassName?: string
   type?: InputHTMLAttributes<HTMLInputElement>["type"]
   placeholder?: string
   name?: string
@@ -13,6 +14,7 @@ interface IProps {
 }
 
 export const Input: FunctionComponent<IProps> = ({
+  componentClassName,
   type = 'text',
   name,
   placeholder,
@@ -20,22 +22,19 @@ export const Input: FunctionComponent<IProps> = ({
   labelText,
   handleChange,
   ...props
-}) => {
-
-  return (
-    <div className='form-floating container-fluid p-0'>
-      <input
-        type={type}
-        name={name}
-        className={classNames('form-control', styles.input)}
-        placeholder={placeholder}
-        value={value}
-        onChange={handleChange}
-        {...props}
-      />
-      <label htmlFor={name} className={classNames("text-dark", styles.label)}>
-        {labelText}
-      </label>
-    </div>
-  )
-}
+}) => (
+  <div className={classNames('form-floating container-fluid p-0', componentClassName)}>
+    <input
+      type={type}
+      name={name}
+      className={classNames('form-control', styles.input)}
+      placeholder={placeholder}
+      value={value}
+      onChange={handleChange}
+      {...props}
+    />
+    <label htmlFor={name} className={classNames("text-dark", styles.label)}>
+      {labelText}
+    </label>
+  </div>
+)
