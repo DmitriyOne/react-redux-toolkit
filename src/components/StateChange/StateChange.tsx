@@ -22,12 +22,12 @@ export const StateChange: FunctionComponent = () => {
         componentClassName='mb-4'
         labelText='Name'
         placeholder='Ivan'
-        handleChange={handleChangeFirstName}
+        onChange={handleChangeFirstName}
       />
       <Input
         labelText='Surname'
         placeholder='Ivanov'
-        handleChange={handleChangeLastName}
+        onChange={handleChangeLastName}
       />
       <div className='d-flex flex-column align-items-start mt-5'>
         <span>

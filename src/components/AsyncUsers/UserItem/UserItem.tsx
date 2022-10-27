@@ -3,7 +3,7 @@ import { XCircleFill } from 'react-bootstrap-icons'
 import { Button } from '../../Button'
 import { InputCheckbox } from '../../Input'
 
-export const TodoItem: FunctionComponent = () => {
+export const UserItem: FunctionComponent = () => {
   return (
     <ul className='list-group container-fluid'>
       <li className='list-group-item d-flex justify-content-between  align-items-center p-0 pe-3'>

@@ -10,7 +10,7 @@ interface IProps {
   name?: string
   value?: string
   labelText?: string
-  handleChange?: (e: ChangeEvent<HTMLInputElement>) => void
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
 export const Input: FunctionComponent<IProps> = ({
@@ -20,7 +20,7 @@ export const Input: FunctionComponent<IProps> = ({
   placeholder,
   value,
   labelText,
-  handleChange,
+  onChange,
   ...props
 }) => (
   <div className={classNames('form-floating container-fluid p-0', componentClassName)}>
@@ -30,7 +30,7 @@ export const Input: FunctionComponent<IProps> = ({
       className={classNames('form-control', styles.input)}
       placeholder={placeholder}
       value={value}
-      onChange={handleChange}
+      onChange={onChange}
       {...props}
     />
     <label htmlFor={name} className={classNames("text-dark", styles.label)}>
