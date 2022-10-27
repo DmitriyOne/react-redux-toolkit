@@ -1,13 +1,13 @@
 import { FunctionComponent } from 'react'
 
-import { TodoItem } from './TodoItem'
+import { UserItem } from './UserItem'
 
 import styles from './async-todo.module.scss'
 
-export const AsyncTodo: FunctionComponent = ({
+export const AsyncUsers: FunctionComponent = ({
 
 }) => {
   return (
-    <TodoItem />
+    <UserItem />
   )
 }

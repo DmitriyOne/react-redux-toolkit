@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react'
-import { AsyncTodo, B, Button, Heading, Input } from '../components'
+import { AsyncUsers, B, Button, Heading, Input } from '../components'
 
 export const HomePage: FunctionComponent = () => {
   return (
@@ -18,7 +18,7 @@ export const HomePage: FunctionComponent = () => {
       <br />
       <B>Bold Text</B>
       <br />
-      <AsyncTodo />
+      <AsyncUsers />
     </>
   )
 }

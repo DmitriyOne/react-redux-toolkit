@@ -5,6 +5,11 @@
   min-height: 100vh;
 }
 
+.main {
+  width: 100%;
+  max-width: 760px;
+}
+
 .container {
   padding: 0;
 }
@@ -15,4 +20,9 @@
 
 .footer-row {
   font-size: 14px;
+}
+
+.input-checkbox {
+  border: none;
+  border-radius: 0;
 }

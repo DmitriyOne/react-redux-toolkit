@@ -14,11 +14,14 @@ export const Layout: FunctionComponent = () => (
     ">
     <Header />
     <main className="
-      container
+      main
       d-flex 
       flex-column
       justify-content-center  
       align-items-center
+      mx-auto
+      mb-4
+      pb-4
     ">
       <Outlet />
     </main>
