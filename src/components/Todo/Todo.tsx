@@ -1,26 +1,15 @@
-import { ChangeEvent, FunctionComponent, useEffect, useState } from 'react'
+import { ChangeEvent, FunctionComponent, useState } from 'react'
 
-import { useAppActions, useAppSelector, useLocalStorage } from '../../hooks'
+import { useAppActions, useAppSelector } from '../../hooks'
 import { ITodo } from '../../model/interfaces'
 
 import { Input, Button } from '../../components'
-
 import { TodoItem } from './TodoItem'
 
 export const Todo: FunctionComponent = () => {
   const [value, setValue] = useState('')
-  // const [todoss, setTodos] = useState<ITodo[]>([])
   let todos = useAppSelector(state => state.todo)
-  // const [todosLS, setTodosLS] = useLocalStorage<ITodo[]>('todo', todoss)
   const { addMyTodo, toggleCompletedTodo, removeTodo } = useAppActions()
-
-  // useEffect(() => {
-  //   const newEl = JSON.parse(localStorage.getItem('todo') || '{}');
-  //   console.log(newEl);
-  // }, [])
-
-  console.log(todos);
-
 
   const handleValue = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value)
@@ -33,8 +22,6 @@ export const Todo: FunctionComponent = () => {
       completed: false
     }
     addMyTodo(todo)
-    // setTodos([...todoss, todo])
-    // setTodosLS([...todosLS, todo])
     setValue('')
   }
 

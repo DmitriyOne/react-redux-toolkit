@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react'
 import { XSquareFill } from 'react-bootstrap-icons'
 
-import { ITodo, ITodoArray } from '../../../model/interfaces'
+import { ITodo } from '../../../model/interfaces'
 import { InputCheckbox, Button } from '../..'
 import classNames from 'classnames'
 
