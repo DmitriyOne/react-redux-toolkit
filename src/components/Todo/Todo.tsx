@@ -1,15 +1,25 @@
-import { ChangeEvent, FunctionComponent, useState } from 'react'
+import { ChangeEvent, FunctionComponent, useEffect, useState } from 'react'
 
 import { useAppActions, useAppSelector } from '../../hooks'
 import { ITodo } from '../../model/interfaces'
 
 import { Input, Button } from '../../components'
 import { TodoItem } from './TodoItem'
+import classNames from 'classnames'
 
 export const Todo: FunctionComponent = () => {
   const [value, setValue] = useState('')
+  const [isDisabled, setIsDisabled] = useState(true)
   let todos = useAppSelector(state => state.todo)
   const { addMyTodo, toggleCompletedTodo, removeTodo } = useAppActions()
+
+  useEffect(() => {
+    if (value.length >= 3) {
+      setIsDisabled(false)
+    } else {
+      setIsDisabled(true)
+    }
+  }, [value])
 
   const handleValue = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value)
@@ -21,8 +31,11 @@ export const Todo: FunctionComponent = () => {
       title: value,
       completed: false
     }
-    addMyTodo(todo)
-    setValue('')
+    if (value.length > 3) {
+      addMyTodo(todo)
+      setValue('')
+      setIsDisabled(true)
+    }
   }
 
   const onToggleTodo = (id: string) => {
@@ -43,7 +56,10 @@ export const Todo: FunctionComponent = () => {
           onChange={handleValue}
         />
         <Button
-          className='btn btn-dark ms-4 text-nowrap'
+          className={classNames(
+            'btn btn-dark ms-4 text-nowrap',
+            isDisabled ? 'disabled' : ''
+          )}
           onClick={() => addTodo()}
         >
           Add new todo

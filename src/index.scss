@@ -26,3 +26,7 @@
   border: none;
   border-radius: 0;
 }
+
+.btn.disabled {
+  opacity: 0.5;
+}
