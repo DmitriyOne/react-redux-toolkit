@@ -6,3 +6,8 @@ export * from './B';
 export * from './AsyncUsers';
 export * from './Todo';
 export * from './StateChange';
+export * from './RandomIcons';
+export * from './Spinner';
+export * from './Error';
+export * from './OneUser';
+export * from './Breadcrumb';

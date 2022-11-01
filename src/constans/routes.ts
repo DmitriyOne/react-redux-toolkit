@@ -2,7 +2,9 @@ export const REACT_ROUTS = {
   HOME: '/',
   STATE: '/state',
   TODO: '/todo',
-  ASYNC: '/async',
+  USERS: '/users',
+  USER: 'users/:id',
+  NOT_FOUND: '*'
 }
 
 export const SOCIAL_ROUTES = {

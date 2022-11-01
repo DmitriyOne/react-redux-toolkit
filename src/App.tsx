@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom"
 import { REACT_ROUTS } from "./constans/routes"
 
 import { Layout } from "./components"
-import { AsyncPage, HomePage, StatePage, TodoPage } from "./screens"
+import { HomePage, StatePage, TodoPage, UsersPage, UserPage, NotFoundPage } from "./screens"
 
 const App: FunctionComponent = () => {
   return (
@@ -13,7 +13,9 @@ const App: FunctionComponent = () => {
         <Route index element={<HomePage />} />
         <Route path={REACT_ROUTS.STATE} element={<StatePage />} />
         <Route path={REACT_ROUTS.TODO} element={<TodoPage />} />
-        <Route path={REACT_ROUTS.ASYNC} element={<AsyncPage />} />
+        <Route path={REACT_ROUTS.USERS} element={<UsersPage />} />
+        <Route path={REACT_ROUTS.USER} element={<UserPage />} />
+        <Route path={REACT_ROUTS.NOT_FOUND} element={<NotFoundPage />} />
       </Route>
     </Routes>
   )
