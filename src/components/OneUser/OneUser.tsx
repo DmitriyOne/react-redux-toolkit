@@ -1,12 +1,9 @@
 import { FunctionComponent } from 'react'
 import { Link } from 'react-router-dom';
-
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
-
 
 import { randomIcon, B, Heading } from '../../components';
 import { IUser } from '../../model/interfaces/IUser'
-
 
 interface IProps {
   user?: IUser
@@ -103,13 +100,12 @@ export const OneUser: FunctionComponent<IProps> = ({
       </div>
       <div
         className={`
-          d-flex 
-          align-items-center 
-          ${prevUser === '0' ?
-            'justify-content-end' :
-            'justify-content-between'}
-          mt-4`
+        d-flex 
+        align-items-center 
+        ${prevUser === '0' ? 'justify-content-end' : 'justify-content-between'}
+        mt-4`
         }
+        style={{ width: '100%', maxWidth: '500px' }}
       >
         {prevUser !== '0'
           && <Link

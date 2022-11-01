@@ -11,3 +11,5 @@ export * from './Spinner';
 export * from './Error';
 export * from './OneUser';
 export * from './Breadcrumb';
+export * from './AnimatedPage';
+export * from './AnimatedRoutes';

@@ -13,18 +13,7 @@ export const Layout: FunctionComponent = () => (
       p-0
     ">
     <Header />
-    <main className="
-      main
-      d-flex 
-      flex-column
-      justify-content-center  
-      align-items-center
-      mx-auto
-      mb-4
-      pb-4
-    ">
-      <Outlet />
-    </main>
+    <Outlet />
     <Footer />
   </div>
 )

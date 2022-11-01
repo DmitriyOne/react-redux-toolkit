@@ -31,7 +31,7 @@ export const Todo: FunctionComponent = () => {
       title: value,
       completed: false
     }
-    if (value.length > 3) {
+    if (value.length >= 3) {
       addMyTodo(todo)
       setValue('')
       setIsDisabled(true)

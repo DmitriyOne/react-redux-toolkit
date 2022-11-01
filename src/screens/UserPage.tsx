@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react'
 import { useParams } from 'react-router-dom';
 
-import { Spinner, Error, Breadcrumb, OneUser } from '../components';
+import { Spinner, Error, Breadcrumb, OneUser, AnimatedPage } from '../components';
 
 import { usersAPI } from '../services';
 
@@ -26,7 +26,7 @@ export const UserPage: FunctionComponent = () => {
   }
 
   return (
-    <div>
+    <AnimatedPage>
       <Breadcrumb currentPage={user?.name} />
       {isError && <Error />}
       {isLoading && <Spinner />}
@@ -35,6 +35,6 @@ export const UserPage: FunctionComponent = () => {
         prevUser={prevUser}
         nextUser={nextUser}
       />
-    </div>
+    </AnimatedPage>
   )
 }

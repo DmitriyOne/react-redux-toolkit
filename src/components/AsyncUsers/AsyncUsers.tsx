@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect, useState, useContext } from 'react'
+import { FunctionComponent, useState } from 'react'
 
 import { usersAPI } from '../../services'
 

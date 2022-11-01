@@ -12,7 +12,8 @@ export const Breadcrumb: FunctionComponent<IProps> = ({
 }) => {
   return (
     <nav
-      aria-label="breadcrumb">
+      style={{ width: '100%', maxWidth: '500px' }}
+    >
       <ol className="breadcrumb">
         <li className="breadcrumb-item">
           <Link to={REACT_ROUTS.HOME}>
