@@ -1,9 +1,11 @@
 import { FunctionComponent } from 'react'
 import { XSquareFill } from 'react-bootstrap-icons'
 
-import { ITodo } from '../../../model/interfaces'
-import { InputCheckbox, Button } from '../..'
 import classNames from 'classnames'
+
+import { ITodo } from '../../../model/interfaces'
+
+import { InputCheckbox, Button } from '../../../components'
 
 interface IProps {
   todo?: ITodo

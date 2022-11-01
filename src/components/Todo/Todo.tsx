@@ -1,11 +1,11 @@
 import { ChangeEvent, FunctionComponent, useEffect, useState } from 'react'
+import classNames from 'classnames'
 
 import { useAppActions, useAppSelector } from '../../hooks'
 import { ITodo } from '../../model/interfaces'
 
 import { Input, Button } from '../../components'
 import { TodoItem } from './TodoItem'
-import classNames from 'classnames'
 
 export const Todo: FunctionComponent = () => {
   const [value, setValue] = useState('')

@@ -2,11 +2,11 @@ import { FunctionComponent } from 'react'
 
 import { Heading } from '../components'
 
-export const HomePage: FunctionComponent = () => {
+export const NotFoundPage: FunctionComponent = () => {
   return (
     <>
       <Heading align='center'>
-        Home Page
+        404 Page
       </Heading>
     </>
   )
