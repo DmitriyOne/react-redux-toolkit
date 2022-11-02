@@ -1,12 +1,12 @@
-import { FunctionComponent } from "react"
-import { AnimatedRoutes } from "./components"
+import { FunctionComponent } from "react";
+import { AnimatedRoutes } from "./components";
 
 const App: FunctionComponent = () => {
-  return (
-    <>
-      <AnimatedRoutes />
-    </>
-  )
-}
+	return (
+		<>
+			<AnimatedRoutes />
+		</>
+	);
+};
 
-export default App
+export default App;

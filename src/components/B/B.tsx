@@ -1,13 +1,13 @@
-import { FunctionComponent, ReactNode } from 'react'
+import { FunctionComponent, ReactNode } from "react";
 
 interface IProps {
   children: ReactNode
 }
 
 export const B: FunctionComponent<IProps> = ({
-  children
+	children
 }) => (
-  <b>
-    {children}
-  </b>
-)
+	<b>
+		{children}
+	</b>
+);

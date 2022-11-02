@@ -1,9 +1,9 @@
-import { createElement, FunctionComponent, ReactNode } from 'react'
-import classNames from 'classnames';
+import { createElement, FunctionComponent, ReactNode } from "react";
+import classNames from "classnames";
 
-import { ETags, ETextPosition } from '../../model/enums';
+import { ETags, ETextPosition } from "../../model/enums";
 
-import styles from './headings.module.scss'
+import styles from "./headings.module.scss";
 
 interface IProps {
   as?: keyof typeof ETags
@@ -13,19 +13,19 @@ interface IProps {
 }
 
 export const Heading: FunctionComponent<IProps> = ({
-  as = 'h1',
-  className,
-  children,
-  align = 'left'
+	as = "h1",
+	className,
+	children,
+	align = "left"
 }) => {
-  return createElement(
-    as,
-    {className: classNames(
-        styles.title,
-        styles[as],
-        className,
-        styles[align]
-      )},
-    children
-  );
-}
+	return createElement(
+		as,
+		{className: classNames(
+			styles.title,
+			styles[as],
+			className,
+			styles[align]
+		)},
+		children
+	);
+};

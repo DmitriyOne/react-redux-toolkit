@@ -1,2 +1,2 @@
-export * from './B';
+export * from "./B";
 

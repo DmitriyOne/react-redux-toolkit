@@ -1,1 +1,1 @@
-export * from './AnimatedPage';
+export * from "./AnimatedPage";

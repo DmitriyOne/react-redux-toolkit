@@ -1,1 +1,1 @@
-export * from './RandomIcons';
+export * from "./RandomIcons";

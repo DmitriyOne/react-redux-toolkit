@@ -1,4 +1,4 @@
-import { FunctionComponent, ReactNode } from 'react'
+import { FunctionComponent, ReactNode } from "react";
 
 import { motion } from "framer-motion";
 
@@ -7,22 +7,22 @@ interface IProps {
 }
 
 export const AnimatedPage: FunctionComponent<IProps> = ({
-  children,
+	children,
 }) => {
-  const animations = {
-    initial: { opacity: 0, x: 100 },
-    animate: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: -100 },
-  };
+	const animations = {
+		initial: { opacity: 0, x: 100 },
+		animate: { opacity: 1, x: 0 },
+		exit: { opacity: 0, x: -100 },
+	};
 
-  return (
-    <motion.main
-      variants={animations}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition={{ duration: .3 }}
-      className="
+	return (
+		<motion.main
+			variants={animations}
+			initial='initial'
+			animate='animate'
+			exit='exit'
+			transition={{ duration: .3 }}
+			className='
       main
       mb-4
       pb-4
@@ -31,8 +31,8 @@ export const AnimatedPage: FunctionComponent<IProps> = ({
       justify-content-center  
       align-items-center
       mx-auto
-      ">
-      {children}
-    </motion.main>
-  );
-}
+      '>
+			{children}
+		</motion.main>
+	);
+};

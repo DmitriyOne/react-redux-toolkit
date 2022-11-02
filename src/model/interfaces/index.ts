@@ -1,2 +1,2 @@
-export * from './IStateInput';
-export * from './ITodo';
+export * from "./IStateInput";
+export * from "./ITodo";

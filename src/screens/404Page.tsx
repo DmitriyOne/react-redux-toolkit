@@ -1,13 +1,13 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent } from "react";
 
-import { AnimatedPage, Heading } from '../components'
+import { AnimatedPage, Heading } from "../components";
 
 export const NotFoundPage: FunctionComponent = () => {
-  return (
-    <AnimatedPage>
-      <Heading align='center'>
+	return (
+		<AnimatedPage>
+			<Heading align='center'>
         404 Page
-      </Heading>
-    </AnimatedPage>
-  )
-}
+			</Heading>
+		</AnimatedPage>
+	);
+};

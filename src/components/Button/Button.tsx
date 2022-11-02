@@ -1,18 +1,24 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, FunctionComponent } from 'react'
+import {
+	ButtonHTMLAttributes,
+	DetailedHTMLProps,
+	FunctionComponent
+} from "react";
 
-interface IProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-  className?: string
+interface IProps extends
+	DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>,
+		HTMLButtonElement> {
+	className?: string
 }
 
 export const Button: FunctionComponent<IProps> = ({
-  children,
-  className,
-  ...props
+	children,
+	className,
+	...props
 }) => (
-  <button
-    className={className}
-    {...props}
-  >
-    {children}
-  </button>
-)
+	<button
+		className={className}
+		{...props}
+	>
+		{children}
+	</button>
+);

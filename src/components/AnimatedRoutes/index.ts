@@ -1,1 +1,1 @@
-export * from './AnimatedRoutes';
+export * from "./AnimatedRoutes";

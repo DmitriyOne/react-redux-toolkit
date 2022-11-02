@@ -5,11 +5,11 @@ import { todoActions } from "../store/reducers/todoSlice";
 import { stateInputActions } from "../store/reducers/stateSlice";
 
 const actions = {
-  ...stateInputActions,
-  ...todoActions,
-}
+	...stateInputActions,
+	...todoActions,
+};
 
 export const useAppActions = () => {
-  const dispatch = useDispatch()
-  return bindActionCreators(actions, dispatch)
-}
+	const dispatch = useDispatch();
+	return bindActionCreators(actions, dispatch);
+};
