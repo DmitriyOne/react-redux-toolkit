@@ -13,3 +13,4 @@ export * from "./OneUser";
 export * from "./Breadcrumb";
 export * from "./AnimatedPage";
 export * from "./AnimatedRoutes";
+export * from './HomeContent';
