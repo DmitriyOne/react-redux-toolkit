@@ -2,7 +2,9 @@ import { ChangeEvent, FunctionComponent } from "react";
 
 import { useAppActions, useAppSelector } from "../../hooks";
 
-import { B, Input } from "../../components";
+import { Input } from "../../components";
+import { FirstName } from "./FirstName";
+import { LastName } from "./LastName";
 
 export const StateChange: FunctionComponent = () => {
 	const { firstName, lastName } = useAppSelector(state => state.stateInput);
@@ -30,12 +32,8 @@ export const StateChange: FunctionComponent = () => {
 				onChange={handleChangeLastName}
 			/>
 			<div className='d-flex flex-column align-items-start mt-5'>
-				<span>
-					Name: <B> {firstName} </B>
-				</span>
-				<span>
-					Surname: <B> {lastName} </B>
-				</span>
+				<FirstName firstName={firstName} />
+				<LastName lastName={lastName} />
 			</div>
 		</div>
 	);
