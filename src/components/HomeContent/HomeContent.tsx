@@ -1,44 +1,68 @@
-import { FunctionComponent } from "react";
-import { B } from "../B";
+import { FunctionComponent, useEffect, useState, } from "react";
+
+import { Button } from "../../components";
+import { ITranslation } from "../../model/interfaces";
+
+import { translations } from "./translations";
 
 export const HomeContent: FunctionComponent = () => {
+	const [language, setLanguage] = useState<ITranslation>();
+
+	const getTranslation = (lang: string,) => {
+		const currentLanguage =
+			translations.find((item) => item.language === lang);
+
+		setLanguage(currentLanguage);
+	};
+
+	useEffect(() => {
+		getTranslation("English");
+	}, []);
+
 	return (
 		<>
+			<div className='
+			container-fluid 
+			d-flex 
+			justify-content-start 
+			p-0
+			mt-4
+			'>
+				<Button
+					id='eng'
+					className='btn me-4'
+					onClick={() => getTranslation("English")}
+				>
+					English
+				</Button>
+				<Button
+					id='rus'
+					className='btn me-4'
+					onClick={() => getTranslation("Russian")}
+				>
+					Russian
+				</Button>
+				<Button
+					id='ukr'
+					className='btn'
+					onClick={() => getTranslation("Ukraine")}
+				>
+					Ukraine
+				</Button>
+			</div>
 			<p className='mt-4'>
-				В приложении используется: React v18, TypeScript,
-				Redux toolkit, RTK query, Redux Persist
-				(для синхронизации redux с localstorage),
-				Bootstrap 5, SCSS, Framer motion, ES Lint.
+				{language?.header}
 			</p>
-
 			<div className='text-start container-fluid p-0'>
-				Это приложение разделено на 3 части:
+				{language?.body}
 			</div>
 			<ol className='p-0 mt-3'>
+				{language?.items.map((item, idx) =>
+					<li key={idx}>
+						{item}
+					</li>
+				)}
 				<li>
-					<B>1. Самая простая.</B>
-					<br />
-					Можно увидеть, как вытаскивать данные из формы
-					и выводить их в других компонентах.
-				</li>
-				<li>
-					<B>2. Список дел на redux toolkit. </B>
-					<br />
-					Можно добавлять свои списки дел, ставить флажок
-					выполнено задание или нет, а также его можно удалить.
-					Еще этот список дел синхронизируется с localstorage,
-					что позволяет не терять данные при перезагрузке страницы.
-					Данный функционал может пригодиться для интернет-магазинов.
-				</li>
-				<li>
-					<B>3. Работа с RTK query.</B>
-					<br />
-					Вначале загрузки получаем 3-х пользователей из сайта
-					jsonplaceholder и имеем возможность подгружать
-					по 1 пользователю, нажимая на кнопку.
-					При каждом обновлении пользователей у них меняются аварки.
-					При нажатии на имя пользователе вы будете перенаправлены
-					на страницу с данным об этом пользователе.
 				</li>
 			</ol>
 		</>
